@@ -2,13 +2,13 @@
 
 import numpy as np
 import os, csv, random, gc, pickle
-import nibabel as nib
+import nibabel as nib   #处理医学格式nii专用库
 import pandas as pd
-from tqdm import tqdm
+from tqdm import tqdm   #进度条
 
 
 #==================== LOAD ALL IMAGES' PATH AND COMPUTE MEAN/ STD
-metadata = pd.read_csv('C:/Users/Dell/Desktop/metadata.csv')
+metadata = pd.read_csv('C:/Users/Dell/Desktop/metadata.csv')  #.csv是存放表格数据的格式，可用excel直接打开并编辑
 totaldata = (metadata.Label != 0).values.astype('bool')
 print(totaldata.sum())#合格图片总数
 
@@ -117,6 +117,7 @@ X_train_input = np.asarray(X_train_input, dtype=np.float32)
 X_train_target = np.asarray(X_train_target)#, dtype=np.float32)
 print(X_train_input.shape)
 print(X_train_target.shape)
+#存放转化后的数据到本地
 #np.savez("testsave.npz",X_train_input,X_train_target,X_dev_input,X_dev_target)
 #r=np.load("testsave.npz")
 #rr=r["arr_0"]
@@ -127,7 +128,7 @@ print(X_train_target.shape)
 #     pickle.dump(X_train_input, f, protocol=4)
 #with open(save_dir + 'train_target.pickle', 'wb') as f:
 #     pickle.dump(X_train_target, f, protocol=4)
-#--------------------------------傲娇的分割线-----------------------------------
+
 
 
     
