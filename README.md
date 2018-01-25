@@ -3,9 +3,9 @@
 
 首先配置本地运行环境：
 
-1、安装Anaconda3(这是一个开源的python发行版本，简单说就是一个集成了大量python库的管理工具，它直接包含最新版python以及我们常用的各种python库，包括numpy,matplotlib,pandas等等，当然连安装python也省了。)
+1、安装Anaconda3(这是一个开源的python发行版本，简单说就是一个集成了大量python库的管理工具，它直接包含最新版python以及我们常用的各种python库，包括numpy,matplotlib,pandas等等，当然连安装python也省了)。
 
-2、安装tensorflow深度学习框架，以及安装nibabel等非常见的库都可直接使用anaconda3安装。
+2、安装tensorflow深度学习框架，以及nibabel,git等未直接安装的库都可通过anaconda3安装。
 
 3、安装tensorlayer扩展库，详情参考下文相关网址。
 
